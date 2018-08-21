@@ -1,6 +1,10 @@
 <h1>todo</h1>
 
-<p><%= maVar %></p>
+<ul>
+    <% toDoList.forEach((todo, index) => { %>
+        <li><a href="/delAToDo/<%= index %>">✘</a> <%= todo %></li>
+    <% }); %>
+</ul>
 
 <form method="post" action="/addAToDo">
     <input type="text" name="myTodo">
